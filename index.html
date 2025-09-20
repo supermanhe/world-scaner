@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>World Scanner</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <video id="cam" playsinline muted autoplay></video>
+
+    <div class="hud" aria-hidden="true">
+      <!-- 1:1 扫描框（只用于取景，不会合成进最终照片） -->
+      <div class="frame" id="frame">
+        <div class="scanline"></div>
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+      </div>
+
+      <!-- 你的边框素材（assets/border.png）会覆盖在最上层，仅装饰用，不参与拍照合成 -->
+      <div class="border-overlay"></div>
+
+      <div class="controls">
+        <button id="startBtn" type="button">开启摄像头</button>
+        <button id="shootBtn" type="button" disabled>拍照</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js" defer></script>
+</body>
+</html>

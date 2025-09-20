@@ -1,0 +1,4 @@
+[build]
+  publish = "."
+
+# 可根据需要添加 headers；默认不限制摄像头权限
